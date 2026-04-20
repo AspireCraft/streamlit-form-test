@@ -17,7 +17,7 @@ def get_gsheet_client():
 
 def save_to_google_sheet(name, email, course):
     client = get_gsheet_client()
-    sheet = client.open_by_key(st.secrets["google_sheet"]["sheet_id"]).worksheet("Sheet1")
+    sheet = client.open_by_key(st.secrets["https://docs.google.com/spreadsheets/d/1eLcyaSrqRfjHmo83F4bqtXtDq6aBAahZ7FGv4WHEnD8/edit?gid=0#gid=0"]["1eLcyaSrqRfjHmo83F4bqtXtDq6aBAahZ7FGv4WHEnD8"]).worksheet("Sheet1")
     sheet.append_row([
         datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         name,
